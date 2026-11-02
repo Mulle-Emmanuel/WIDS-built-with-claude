@@ -1,0 +1,92 @@
+{
+  "version": "0.1.0",
+  "created_utc": "2026-11-01T14:41:46.386436+00:00",
+  "all_features": [
+    "log_n_frames",
+    "log_n_deauth",
+    "log_n_disassoc",
+    "log_n_auth",
+    "log_n_assoc",
+    "log_n_probe",
+    "log_n_beacon",
+    "log_n_action",
+    "frac_mgmt",
+    "frac_ctrl",
+    "frac_data",
+    "retry_ratio",
+    "deauth_bcast_frac",
+    "rssi_mean",
+    "rssi_std",
+    "rssi_available",
+    "log_uniq_src",
+    "log_uniq_dst",
+    "log_deauth_uniq_dst",
+    "log_deauth_uniq_src",
+    "d_log_frames",
+    "d_log_deauth"
+  ],
+  "feature_cols": [
+    "log_n_frames",
+    "log_n_deauth",
+    "log_n_disassoc",
+    "log_n_auth",
+    "log_n_assoc",
+    "log_n_probe",
+    "log_n_beacon",
+    "log_n_action",
+    "frac_mgmt",
+    "frac_ctrl",
+    "frac_data",
+    "retry_ratio",
+    "deauth_bcast_frac",
+    "log_uniq_src",
+    "log_uniq_dst",
+    "log_deauth_uniq_dst",
+    "log_deauth_uniq_src",
+    "d_log_frames",
+    "d_log_deauth"
+  ],
+  "window_s": 1.0,
+  "seq_len": 10,
+  "threshold": 0.5001189781178255,
+  "config": {
+    "window_s": 1.0,
+    "seq_len": 10,
+    "max_gap_windows": 120,
+    "min_attack_frames": 3,
+    "block_windows": 30,
+    "train_frac": 0.7,
+    "val_frac": 0.15,
+    "lstm_units": 64,
+    "dense_units": 32,
+    "dropout": 0.3,
+    "learning_rate": 0.001,
+    "epochs": 40,
+    "batch_size": 64,
+    "patience": 6,
+    "seed": 42,
+    "target_fpr": 0.02,
+    "consecutive": 1,
+    "exclude_features": [
+      "rssi_mean",
+      "rssi_std",
+      "rssi_available"
+    ]
+  },
+  "train_captures": [
+    "deauth"
+  ],
+  "baselines": {
+    "deauth_rate_rule": {
+      "threshold": 49.500003814697266
+    },
+    "mgmt_rate_rule": {
+      "threshold": 68.49997806549072
+    },
+    "frame_rate_rule": {
+      "threshold": 1318.9998168945312
+    }
+  },
+  "python": "3.14.8",
+  "keras": "3.16.0.dev2026102604"
+}

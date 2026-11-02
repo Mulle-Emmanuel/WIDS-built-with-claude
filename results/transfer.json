@@ -1,0 +1,814 @@
+{
+  "trained_on": [
+    "deauth"
+  ],
+  "scored_captures": [
+    "10_SQL_Injection",
+    "11_SSDP",
+    "12_Evil_Twin",
+    "13_Website_spoofing",
+    "2_Disas",
+    "3__Re_Assoc",
+    "4_Rogue_AP",
+    "5_Krack",
+    "6_Kr00k",
+    "7_SSH",
+    "8_Botnet",
+    "9_Malware"
+  ],
+  "overall": {
+    "threshold": 0.5001189781178255,
+    "n": 7568,
+    "accuracy": 0.7698202959830867,
+    "precision": 0.9486887115165337,
+    "recall": 0.32898378805852113,
+    "f1": 0.48854961832061067,
+    "false_positive_rate": 0.008930343322087716,
+    "roc_auc": 0.7443801927409857,
+    "confusion_matrix": {
+      "tn": 4994,
+      "fp": 45,
+      "fn": 1697,
+      "tp": 832
+    }
+  },
+  "per_capture": {
+    "10_SQL_Injection": {
+      "threshold": 0.5001189781178255,
+      "n": 596,
+      "accuracy": 0.8104026845637584,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "false_positive_rate": 0.0,
+      "roc_auc": 0.3775811209439528,
+      "confusion_matrix": {
+        "tn": 483,
+        "fp": 0,
+        "fn": 113,
+        "tp": 0
+      }
+    },
+    "11_SSDP": {
+      "threshold": 0.5001189781178255,
+      "n": 635,
+      "accuracy": 0.6976377952755906,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "false_positive_rate": 0.0,
+      "roc_auc": 0.9725945259593679,
+      "confusion_matrix": {
+        "tn": 443,
+        "fp": 0,
+        "fn": 192,
+        "tp": 0
+      }
+    },
+    "12_Evil_Twin": {
+      "threshold": 0.5001189781178255,
+      "n": 895,
+      "accuracy": 0.5139664804469274,
+      "precision": 1.0,
+      "recall": 0.011363636363636364,
+      "f1": 0.02247191011235955,
+      "false_positive_rate": 0.0,
+      "roc_auc": 0.9630669330669331,
+      "confusion_matrix": {
+        "tn": 455,
+        "fp": 0,
+        "fn": 435,
+        "tp": 5
+      }
+    },
+    "13_Website_spoofing": {
+      "threshold": 0.5001189781178255,
+      "n": 614,
+      "accuracy": 0.5993485342019544,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "false_positive_rate": 0.0,
+      "roc_auc": 0.4437853481795688,
+      "confusion_matrix": {
+        "tn": 368,
+        "fp": 0,
+        "fn": 246,
+        "tp": 0
+      }
+    },
+    "2_Disas": {
+      "threshold": 0.5001189781178255,
+      "n": 596,
+      "accuracy": 0.988255033557047,
+      "precision": 0.9781420765027322,
+      "recall": 0.9835164835164835,
+      "f1": 0.9808219178082191,
+      "false_positive_rate": 0.00966183574879227,
+      "roc_auc": 0.9996682061899452,
+      "confusion_matrix": {
+        "tn": 410,
+        "fp": 4,
+        "fn": 3,
+        "tp": 179
+      }
+    },
+    "3__Re_Assoc": {
+      "threshold": 0.5001189781178255,
+      "n": 601,
+      "accuracy": 0.9883527454242929,
+      "precision": 0.9833333333333333,
+      "recall": 0.9779005524861878,
+      "f1": 0.9806094182825484,
+      "false_positive_rate": 0.007142857142857143,
+      "roc_auc": 0.9995922125756379,
+      "confusion_matrix": {
+        "tn": 417,
+        "fp": 3,
+        "fn": 4,
+        "tp": 177
+      }
+    },
+    "4_Rogue_AP": {
+      "threshold": 0.5001189781178255,
+      "n": 597,
+      "accuracy": 0.9731993299832495,
+      "precision": 0.9148936170212766,
+      "recall": 1.0,
+      "f1": 0.9555555555555556,
+      "false_positive_rate": 0.03764705882352941,
+      "roc_auc": 0.9665253077975376,
+      "confusion_matrix": {
+        "tn": 409,
+        "fp": 16,
+        "fn": 0,
+        "tp": 172
+      }
+    },
+    "5_Krack": {
+      "threshold": 0.5001189781178255,
+      "n": 624,
+      "accuracy": 0.8862179487179487,
+      "precision": 0.8823529411764706,
+      "recall": 0.6857142857142857,
+      "f1": 0.7717041800643086,
+      "false_positive_rate": 0.035634743875278395,
+      "roc_auc": 0.9656251988545975,
+      "confusion_matrix": {
+        "tn": 433,
+        "fp": 16,
+        "fn": 55,
+        "tp": 120
+      }
+    },
+    "6_Kr00k": {
+      "threshold": 0.5001189781178255,
+      "n": 594,
+      "accuracy": 0.9848484848484849,
+      "precision": 0.9675675675675676,
+      "recall": 0.9835164835164835,
+      "f1": 0.9754768392370572,
+      "false_positive_rate": 0.014563106796116505,
+      "roc_auc": 0.9857569614851168,
+      "confusion_matrix": {
+        "tn": 406,
+        "fp": 6,
+        "fn": 3,
+        "tp": 179
+      }
+    },
+    "7_SSH": {
+      "threshold": 0.5001189781178255,
+      "n": 623,
+      "accuracy": 0.7030497592295345,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "false_positive_rate": 0.0,
+      "roc_auc": 0.46475379489078117,
+      "confusion_matrix": {
+        "tn": 438,
+        "fp": 0,
+        "fn": 185,
+        "tp": 0
+      }
+    },
+    "8_Botnet": {
+      "threshold": 0.5001189781178255,
+      "n": 569,
+      "accuracy": 0.39191564147627417,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "false_positive_rate": 0.0,
+      "roc_auc": 0.4763083542860105,
+      "confusion_matrix": {
+        "tn": 223,
+        "fp": 0,
+        "fn": 346,
+        "tp": 0
+      }
+    },
+    "9_Malware": {
+      "threshold": 0.5001189781178255,
+      "n": 624,
+      "accuracy": 0.8157051282051282,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "false_positive_rate": 0.0,
+      "roc_auc": 0.5562825659861621,
+      "confusion_matrix": {
+        "tn": 509,
+        "fp": 0,
+        "fn": 115,
+        "tp": 0
+      }
+    }
+  },
+  "rules": {
+    "deauth_rate_rule": {
+      "10_SQL_Injection": {
+        "threshold": 49.500003814697266,
+        "n": 596,
+        "accuracy": 0.8104026845637584,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.5,
+        "confusion_matrix": {
+          "tn": 483,
+          "fp": 0,
+          "fn": 113,
+          "tp": 0
+        }
+      },
+      "11_SSDP": {
+        "threshold": 49.500003814697266,
+        "n": 635,
+        "accuracy": 0.6976377952755906,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.5,
+        "confusion_matrix": {
+          "tn": 443,
+          "fp": 0,
+          "fn": 192,
+          "tp": 0
+        }
+      },
+      "12_Evil_Twin": {
+        "threshold": 49.500003814697266,
+        "n": 895,
+        "accuracy": 0.5083798882681564,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.5035264735264735,
+        "confusion_matrix": {
+          "tn": 455,
+          "fp": 0,
+          "fn": 440,
+          "tp": 0
+        }
+      },
+      "13_Website_spoofing": {
+        "threshold": 49.500003814697266,
+        "n": 614,
+        "accuracy": 0.5993485342019544,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.5,
+        "confusion_matrix": {
+          "tn": 368,
+          "fp": 0,
+          "fn": 246,
+          "tp": 0
+        }
+      },
+      "2_Disas": {
+        "threshold": 49.500003814697266,
+        "n": 596,
+        "accuracy": 0.7634228187919463,
+        "precision": 1.0,
+        "recall": 0.22527472527472528,
+        "f1": 0.36771300448430494,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.7108284227849446,
+        "confusion_matrix": {
+          "tn": 414,
+          "fp": 0,
+          "fn": 141,
+          "tp": 41
+        }
+      },
+      "3__Re_Assoc": {
+        "threshold": 49.500003814697266,
+        "n": 601,
+        "accuracy": 0.6988352745424293,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.5181925808997632,
+        "confusion_matrix": {
+          "tn": 420,
+          "fp": 0,
+          "fn": 181,
+          "tp": 0
+        }
+      },
+      "4_Rogue_AP": {
+        "threshold": 49.500003814697266,
+        "n": 597,
+        "accuracy": 0.9363484087102177,
+        "precision": 0.8988095238095238,
+        "recall": 0.877906976744186,
+        "f1": 0.888235294117647,
+        "false_positive_rate": 0.04,
+        "roc_auc": 0.9753556771545827,
+        "confusion_matrix": {
+          "tn": 408,
+          "fp": 17,
+          "fn": 21,
+          "tp": 151
+        }
+      },
+      "5_Krack": {
+        "threshold": 49.500003814697266,
+        "n": 624,
+        "accuracy": 0.719551282051282,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.5314285714285715,
+        "confusion_matrix": {
+          "tn": 449,
+          "fp": 0,
+          "fn": 175,
+          "tp": 0
+        }
+      },
+      "6_Kr00k": {
+        "threshold": 49.500003814697266,
+        "n": 594,
+        "accuracy": 0.6952861952861953,
+        "precision": 1.0,
+        "recall": 0.005494505494505495,
+        "f1": 0.01092896174863388,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.532967032967033,
+        "confusion_matrix": {
+          "tn": 412,
+          "fp": 0,
+          "fn": 181,
+          "tp": 1
+        }
+      },
+      "7_SSH": {
+        "threshold": 49.500003814697266,
+        "n": 623,
+        "accuracy": 0.7030497592295345,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.5,
+        "confusion_matrix": {
+          "tn": 438,
+          "fp": 0,
+          "fn": 185,
+          "tp": 0
+        }
+      },
+      "8_Botnet": {
+        "threshold": 49.500003814697266,
+        "n": 569,
+        "accuracy": 0.39191564147627417,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.5,
+        "confusion_matrix": {
+          "tn": 223,
+          "fp": 0,
+          "fn": 346,
+          "tp": 0
+        }
+      },
+      "9_Malware": {
+        "threshold": 49.500003814697266,
+        "n": 624,
+        "accuracy": 0.8157051282051282,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.5,
+        "confusion_matrix": {
+          "tn": 509,
+          "fp": 0,
+          "fn": 115,
+          "tp": 0
+        }
+      }
+    },
+    "mgmt_rate_rule": {
+      "10_SQL_Injection": {
+        "threshold": 68.49997806549072,
+        "n": 596,
+        "accuracy": 0.8104026845637584,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.47244361384415245,
+        "confusion_matrix": {
+          "tn": 483,
+          "fp": 0,
+          "fn": 113,
+          "tp": 0
+        }
+      },
+      "11_SSDP": {
+        "threshold": 68.49997806549072,
+        "n": 635,
+        "accuracy": 0.6992125984251969,
+        "precision": 1.0,
+        "recall": 0.005208333333333333,
+        "f1": 0.010362694300518135,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.46013214823175314,
+        "confusion_matrix": {
+          "tn": 443,
+          "fp": 0,
+          "fn": 191,
+          "tp": 1
+        }
+      },
+      "12_Evil_Twin": {
+        "threshold": 68.49997806549072,
+        "n": 895,
+        "accuracy": 0.5106145251396648,
+        "precision": 1.0,
+        "recall": 0.004545454545454545,
+        "f1": 0.00904977375565611,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.9320654345654346,
+        "confusion_matrix": {
+          "tn": 455,
+          "fp": 0,
+          "fn": 438,
+          "tp": 2
+        }
+      },
+      "13_Website_spoofing": {
+        "threshold": 68.49997806549072,
+        "n": 614,
+        "accuracy": 0.5993485342019544,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.4401732060798869,
+        "confusion_matrix": {
+          "tn": 368,
+          "fp": 0,
+          "fn": 246,
+          "tp": 0
+        }
+      },
+      "2_Disas": {
+        "threshold": 68.49997806549072,
+        "n": 596,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 1.0,
+        "confusion_matrix": {
+          "tn": 414,
+          "fp": 0,
+          "fn": 0,
+          "tp": 182
+        }
+      },
+      "3__Re_Assoc": {
+        "threshold": 68.49997806549072,
+        "n": 601,
+        "accuracy": 0.9683860232945092,
+        "precision": 0.9939024390243902,
+        "recall": 0.9005524861878453,
+        "f1": 0.9449275362318841,
+        "false_positive_rate": 0.002380952380952381,
+        "roc_auc": 0.9976453564851355,
+        "confusion_matrix": {
+          "tn": 419,
+          "fp": 1,
+          "fn": 18,
+          "tp": 163
+        }
+      },
+      "4_Rogue_AP": {
+        "threshold": 68.49997806549072,
+        "n": 597,
+        "accuracy": 0.9396984924623115,
+        "precision": 0.8953488372093024,
+        "recall": 0.8953488372093024,
+        "f1": 0.8953488372093024,
+        "false_positive_rate": 0.042352941176470586,
+        "roc_auc": 0.9750341997264022,
+        "confusion_matrix": {
+          "tn": 407,
+          "fp": 18,
+          "fn": 18,
+          "tp": 154
+        }
+      },
+      "5_Krack": {
+        "threshold": 68.49997806549072,
+        "n": 624,
+        "accuracy": 0.7884615384615384,
+        "precision": 1.0,
+        "recall": 0.24571428571428572,
+        "f1": 0.3944954128440367,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.8259179128221444,
+        "confusion_matrix": {
+          "tn": 449,
+          "fp": 0,
+          "fn": 132,
+          "tp": 43
+        }
+      },
+      "6_Kr00k": {
+        "threshold": 68.49997806549072,
+        "n": 594,
+        "accuracy": 0.9983164983164983,
+        "precision": 0.994535519125683,
+        "recall": 1.0,
+        "f1": 0.9972602739726028,
+        "false_positive_rate": 0.0024271844660194173,
+        "roc_auc": 1.0,
+        "confusion_matrix": {
+          "tn": 411,
+          "fp": 1,
+          "fn": 0,
+          "tp": 182
+        }
+      },
+      "7_SSH": {
+        "threshold": 68.49997806549072,
+        "n": 623,
+        "accuracy": 0.7030497592295345,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.5111378501789461,
+        "confusion_matrix": {
+          "tn": 438,
+          "fp": 0,
+          "fn": 185,
+          "tp": 0
+        }
+      },
+      "8_Botnet": {
+        "threshold": 68.49997806549072,
+        "n": 569,
+        "accuracy": 0.39191564147627417,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.5328352212343503,
+        "confusion_matrix": {
+          "tn": 223,
+          "fp": 0,
+          "fn": 346,
+          "tp": 0
+        }
+      },
+      "9_Malware": {
+        "threshold": 68.49997806549072,
+        "n": 624,
+        "accuracy": 0.8157051282051282,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.45498419748868196,
+        "confusion_matrix": {
+          "tn": 509,
+          "fp": 0,
+          "fn": 115,
+          "tp": 0
+        }
+      }
+    },
+    "frame_rate_rule": {
+      "10_SQL_Injection": {
+        "threshold": 1318.9998168945312,
+        "n": 596,
+        "accuracy": 0.5436241610738255,
+        "precision": 0.2891246684350133,
+        "recall": 0.9646017699115044,
+        "f1": 0.4448979591836735,
+        "false_positive_rate": 0.5548654244306418,
+        "roc_auc": 0.6847047399182836,
+        "confusion_matrix": {
+          "tn": 215,
+          "fp": 268,
+          "fn": 4,
+          "tp": 109
+        }
+      },
+      "11_SSDP": {
+        "threshold": 1318.9998168945312,
+        "n": 635,
+        "accuracy": 0.6031496062992125,
+        "precision": 0.43243243243243246,
+        "recall": 1.0,
+        "f1": 0.6037735849056604,
+        "false_positive_rate": 0.5688487584650113,
+        "roc_auc": 0.9907531508653122,
+        "confusion_matrix": {
+          "tn": 191,
+          "fp": 252,
+          "fn": 0,
+          "tp": 192
+        }
+      },
+      "12_Evil_Twin": {
+        "threshold": 1318.9998168945312,
+        "n": 895,
+        "accuracy": 0.6391061452513966,
+        "precision": 0.5895865237366003,
+        "recall": 0.875,
+        "f1": 0.7044830741079597,
+        "false_positive_rate": 0.589010989010989,
+        "roc_auc": 0.6619905094905095,
+        "confusion_matrix": {
+          "tn": 187,
+          "fp": 268,
+          "fn": 55,
+          "tp": 385
+        }
+      },
+      "13_Website_spoofing": {
+        "threshold": 1318.9998168945312,
+        "n": 614,
+        "accuracy": 0.752442996742671,
+        "precision": 0.6236842105263158,
+        "recall": 0.9634146341463414,
+        "f1": 0.7571884984025559,
+        "false_positive_rate": 0.38858695652173914,
+        "roc_auc": 0.8790098091198304,
+        "confusion_matrix": {
+          "tn": 225,
+          "fp": 143,
+          "fn": 9,
+          "tp": 237
+        }
+      },
+      "2_Disas": {
+        "threshold": 1318.9998168945312,
+        "n": 596,
+        "accuracy": 0.5302013422818792,
+        "precision": 0.35755813953488375,
+        "recall": 0.6758241758241759,
+        "f1": 0.467680608365019,
+        "false_positive_rate": 0.533816425120773,
+        "roc_auc": 0.5718599033816425,
+        "confusion_matrix": {
+          "tn": 193,
+          "fp": 221,
+          "fn": 59,
+          "tp": 123
+        }
+      },
+      "3__Re_Assoc": {
+        "threshold": 1318.9998168945312,
+        "n": 601,
+        "accuracy": 0.5906821963394343,
+        "precision": 0.41333333333333333,
+        "recall": 0.856353591160221,
+        "f1": 0.5575539568345323,
+        "false_positive_rate": 0.5238095238095238,
+        "roc_auc": 0.6521967903183372,
+        "confusion_matrix": {
+          "tn": 200,
+          "fp": 220,
+          "fn": 26,
+          "tp": 155
+        }
+      },
+      "4_Rogue_AP": {
+        "threshold": 1318.9998168945312,
+        "n": 597,
+        "accuracy": 0.5812395309882747,
+        "precision": 0.4010152284263959,
+        "recall": 0.9186046511627907,
+        "f1": 0.558303886925795,
+        "false_positive_rate": 0.5552941176470588,
+        "roc_auc": 0.6616621067031464,
+        "confusion_matrix": {
+          "tn": 189,
+          "fp": 236,
+          "fn": 14,
+          "tp": 158
+        }
+      },
+      "5_Krack": {
+        "threshold": 1318.9998168945312,
+        "n": 624,
+        "accuracy": 0.3782051282051282,
+        "precision": 0.13402061855670103,
+        "recall": 0.22285714285714286,
+        "f1": 0.16738197424892703,
+        "false_positive_rate": 0.5612472160356348,
+        "roc_auc": 0.3669360483614381,
+        "confusion_matrix": {
+          "tn": 197,
+          "fp": 252,
+          "fn": 136,
+          "tp": 39
+        }
+      },
+      "6_Kr00k": {
+        "threshold": 1318.9998168945312,
+        "n": 594,
+        "accuracy": 0.6178451178451179,
+        "precision": 0.4444444444444444,
+        "recall": 0.989010989010989,
+        "f1": 0.6132879045996593,
+        "false_positive_rate": 0.5461165048543689,
+        "roc_auc": 0.7543275898858424,
+        "confusion_matrix": {
+          "tn": 187,
+          "fp": 225,
+          "fn": 2,
+          "tp": 180
+        }
+      },
+      "7_SSH": {
+        "threshold": 1318.9998168945312,
+        "n": 623,
+        "accuracy": 0.6003210272873194,
+        "precision": 0.42417061611374407,
+        "recall": 0.9675675675675676,
+        "f1": 0.5897858319604613,
+        "false_positive_rate": 0.5547945205479452,
+        "roc_auc": 0.6816857953844255,
+        "confusion_matrix": {
+          "tn": 195,
+          "fp": 243,
+          "fn": 6,
+          "tp": 179
+        }
+      },
+      "8_Botnet": {
+        "threshold": 1318.9998168945312,
+        "n": 569,
+        "accuracy": 0.5746924428822495,
+        "precision": 0.5959409594095941,
+        "recall": 0.9335260115606936,
+        "f1": 0.7274774774774775,
+        "false_positive_rate": 0.9820627802690582,
+        "roc_auc": 0.430162782861142,
+        "confusion_matrix": {
+          "tn": 4,
+          "fp": 219,
+          "fn": 23,
+          "tp": 323
+        }
+      },
+      "9_Malware": {
+        "threshold": 1318.9998168945312,
+        "n": 624,
+        "accuracy": 0.5176282051282052,
+        "precision": 0.270935960591133,
+        "recall": 0.9565217391304348,
+        "f1": 0.42226487523992323,
+        "false_positive_rate": 0.581532416502947,
+        "roc_auc": 0.76286836935167,
+        "confusion_matrix": {
+          "tn": 213,
+          "fp": 296,
+          "fn": 5,
+          "tp": 110
+        }
+      }
+    }
+  },
+  "note": "Transfer to attacks the model was NOT trained on. Recall is the share of that attack's windows flagged by the deauth-trained model; it is not a claim of general attack detection."
+}

@@ -1,0 +1,714 @@
+{
+  "k": 5,
+  "purge_windows": 10,
+  "block_windows": 20,
+  "config": {
+    "window_s": 1.0,
+    "seq_len": 10,
+    "max_gap_windows": 120,
+    "min_attack_frames": 3,
+    "block_windows": 20,
+    "train_frac": 0.7,
+    "val_frac": 0.15,
+    "lstm_units": 64,
+    "dense_units": 32,
+    "dropout": 0.3,
+    "learning_rate": 0.001,
+    "epochs": 40,
+    "batch_size": 64,
+    "patience": 6,
+    "seed": 42,
+    "target_fpr": 0.02,
+    "consecutive": 1,
+    "exclude_features": [
+      "rssi_mean",
+      "rssi_std",
+      "rssi_available"
+    ]
+  },
+  "pooled": {
+    "lstm": {
+      "threshold": null,
+      "n": 891,
+      "accuracy": 0.7575757575757576,
+      "precision": 0.8928571428571429,
+      "recall": 0.573394495412844,
+      "f1": 0.6983240223463687,
+      "false_positive_rate": 0.06593406593406594,
+      "roc_auc": 0.9107772960983971,
+      "confusion_matrix": {
+        "tn": 425,
+        "fp": 30,
+        "fn": 186,
+        "tp": 250
+      }
+    },
+    "deauth_rate_rule": {
+      "threshold": null,
+      "n": 891,
+      "accuracy": 0.5151515151515151,
+      "precision": 0.8333333333333334,
+      "recall": 0.011467889908256881,
+      "f1": 0.02262443438914027,
+      "false_positive_rate": 0.002197802197802198,
+      "roc_auc": 0.5035890714789798,
+      "confusion_matrix": {
+        "tn": 454,
+        "fp": 1,
+        "fn": 431,
+        "tp": 5
+      }
+    },
+    "mgmt_rate_rule": {
+      "threshold": null,
+      "n": 891,
+      "accuracy": 0.5881032547699214,
+      "precision": 0.8285714285714286,
+      "recall": 0.19954128440366972,
+      "f1": 0.32162661737523107,
+      "false_positive_rate": 0.03956043956043956,
+      "roc_auc": 0.9342852102026414,
+      "confusion_matrix": {
+        "tn": 437,
+        "fp": 18,
+        "fn": 349,
+        "tp": 87
+      }
+    },
+    "frame_rate_rule": {
+      "threshold": null,
+      "n": 891,
+      "accuracy": 0.5263748597081931,
+      "precision": 0.559322033898305,
+      "recall": 0.15137614678899083,
+      "f1": 0.23826714801444043,
+      "false_positive_rate": 0.11428571428571428,
+      "roc_auc": 0.6638446415969351,
+      "confusion_matrix": {
+        "tn": 403,
+        "fp": 52,
+        "fn": 370,
+        "tp": 66
+      }
+    }
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "onsets": [],
+      "test_blocks": [
+        [
+          "12_Evil_Twin",
+          4
+        ],
+        [
+          "12_Evil_Twin",
+          5
+        ],
+        [
+          "12_Evil_Twin",
+          9
+        ],
+        [
+          "12_Evil_Twin",
+          17
+        ],
+        [
+          "12_Evil_Twin",
+          18
+        ],
+        [
+          "12_Evil_Twin",
+          24
+        ],
+        [
+          "12_Evil_Twin",
+          28
+        ],
+        [
+          "12_Evil_Twin",
+          32
+        ],
+        [
+          "12_Evil_Twin",
+          37
+        ],
+        [
+          "12_Evil_Twin",
+          42
+        ]
+      ],
+      "n_train": 322,
+      "n_val": 47,
+      "n_test": 200,
+      "test_attack_sequences": 100,
+      "lstm": {
+        "threshold": 0.24402634799480438,
+        "n": 200,
+        "accuracy": 0.98,
+        "precision": 0.9615384615384616,
+        "recall": 1.0,
+        "f1": 0.9803921568627451,
+        "false_positive_rate": 0.04,
+        "roc_auc": 1.0,
+        "confusion_matrix": {
+          "tn": 96,
+          "fp": 4,
+          "fn": 0,
+          "tp": 100
+        }
+      },
+      "baselines": {
+        "deauth_rate_rule": {
+          "threshold": 1e-06,
+          "n": 200,
+          "accuracy": 0.515,
+          "precision": 1.0,
+          "recall": 0.03,
+          "f1": 0.05825242718446602,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.515,
+          "confusion_matrix": {
+            "tn": 100,
+            "fp": 0,
+            "fn": 97,
+            "tp": 3
+          }
+        },
+        "mgmt_rate_rule": {
+          "threshold": 32.49999809265137,
+          "n": 200,
+          "accuracy": 0.595,
+          "precision": 0.9523809523809523,
+          "recall": 0.2,
+          "f1": 0.3305785123966942,
+          "false_positive_rate": 0.01,
+          "roc_auc": 0.9783000000000001,
+          "confusion_matrix": {
+            "tn": 99,
+            "fp": 1,
+            "fn": 80,
+            "tp": 20
+          }
+        },
+        "frame_rate_rule": {
+          "threshold": 8591.501220703125,
+          "n": 200,
+          "accuracy": 0.54,
+          "precision": 0.6333333333333333,
+          "recall": 0.19,
+          "f1": 0.2923076923076923,
+          "false_positive_rate": 0.11,
+          "roc_auc": 0.6506000000000001,
+          "confusion_matrix": {
+            "tn": 89,
+            "fp": 11,
+            "fn": 81,
+            "tp": 19
+          }
+        }
+      }
+    },
+    {
+      "fold": 1,
+      "onsets": [
+        {
+          "block": [
+            "12_Evil_Twin",
+            21
+          ],
+          "onset_window_idx": 1608066098,
+          "detection_delay_windows": 0
+        },
+        {
+          "block": [
+            "12_Evil_Twin",
+            35
+          ],
+          "onset_window_idx": 1608066381,
+          "detection_delay_windows": 0
+        }
+      ],
+      "test_blocks": [
+        [
+          "12_Evil_Twin",
+          2
+        ],
+        [
+          "12_Evil_Twin",
+          8
+        ],
+        [
+          "12_Evil_Twin",
+          16
+        ],
+        [
+          "12_Evil_Twin",
+          19
+        ],
+        [
+          "12_Evil_Twin",
+          21
+        ],
+        [
+          "12_Evil_Twin",
+          22
+        ],
+        [
+          "12_Evil_Twin",
+          35
+        ],
+        [
+          "12_Evil_Twin",
+          36
+        ],
+        [
+          "12_Evil_Twin",
+          38
+        ]
+      ],
+      "n_train": 351,
+      "n_val": 67,
+      "n_test": 180,
+      "test_attack_sequences": 66,
+      "lstm": {
+        "threshold": 0.4806842155958293,
+        "n": 180,
+        "accuracy": 0.8777777777777778,
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "false_positive_rate": 0.19298245614035087,
+        "roc_auc": 0.93613769271664,
+        "confusion_matrix": {
+          "tn": 92,
+          "fp": 22,
+          "fn": 0,
+          "tp": 66
+        }
+      },
+      "baselines": {
+        "deauth_rate_rule": {
+          "threshold": 3.5,
+          "n": 180,
+          "accuracy": 0.6333333333333333,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.49122807017543857,
+          "confusion_matrix": {
+            "tn": 114,
+            "fp": 0,
+            "fn": 66,
+            "tp": 0
+          }
+        },
+        "mgmt_rate_rule": {
+          "threshold": 19.000001907348633,
+          "n": 180,
+          "accuracy": 0.7333333333333333,
+          "precision": 0.7142857142857143,
+          "recall": 0.45454545454545453,
+          "f1": 0.5555555555555556,
+          "false_positive_rate": 0.10526315789473684,
+          "roc_auc": 0.8718102073365231,
+          "confusion_matrix": {
+            "tn": 102,
+            "fp": 12,
+            "fn": 36,
+            "tp": 30
+          }
+        },
+        "frame_rate_rule": {
+          "threshold": 6488.497802734375,
+          "n": 180,
+          "accuracy": 0.5777777777777777,
+          "precision": 0.375,
+          "recall": 0.22727272727272727,
+          "f1": 0.2830188679245283,
+          "false_positive_rate": 0.21929824561403508,
+          "roc_auc": 0.6255980861244019,
+          "confusion_matrix": {
+            "tn": 89,
+            "fp": 25,
+            "fn": 51,
+            "tp": 15
+          }
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "onsets": [
+        {
+          "block": [
+            "12_Evil_Twin",
+            39
+          ],
+          "onset_window_idx": 1608066452,
+          "detection_delay_windows": 9
+        }
+      ],
+      "test_blocks": [
+        [
+          "12_Evil_Twin",
+          6
+        ],
+        [
+          "12_Evil_Twin",
+          10
+        ],
+        [
+          "12_Evil_Twin",
+          11
+        ],
+        [
+          "12_Evil_Twin",
+          12
+        ],
+        [
+          "12_Evil_Twin",
+          34
+        ],
+        [
+          "12_Evil_Twin",
+          39
+        ],
+        [
+          "12_Evil_Twin",
+          41
+        ],
+        [
+          "12_Evil_Twin",
+          43
+        ],
+        [
+          "12_Evil_Twin",
+          44
+        ]
+      ],
+      "n_train": 428,
+      "n_val": 47,
+      "n_test": 180,
+      "test_attack_sequences": 96,
+      "lstm": {
+        "threshold": 0.9978305399417877,
+        "n": 180,
+        "accuracy": 0.6388888888888888,
+        "precision": 1.0,
+        "recall": 0.3229166666666667,
+        "f1": 0.4881889763779528,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.9966517857142857,
+        "confusion_matrix": {
+          "tn": 84,
+          "fp": 0,
+          "fn": 65,
+          "tp": 31
+        }
+      },
+      "baselines": {
+        "deauth_rate_rule": {
+          "threshold": 2.999999761581421,
+          "n": 180,
+          "accuracy": 0.4666666666666667,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.5052083333333334,
+          "confusion_matrix": {
+            "tn": 84,
+            "fp": 0,
+            "fn": 96,
+            "tp": 0
+          }
+        },
+        "mgmt_rate_rule": {
+          "threshold": 20.000000953674316,
+          "n": 180,
+          "accuracy": 0.6333333333333333,
+          "precision": 0.8947368421052632,
+          "recall": 0.3541666666666667,
+          "f1": 0.5074626865671642,
+          "false_positive_rate": 0.047619047619047616,
+          "roc_auc": 0.9561011904761905,
+          "confusion_matrix": {
+            "tn": 80,
+            "fp": 4,
+            "fn": 62,
+            "tp": 34
+          }
+        },
+        "frame_rate_rule": {
+          "threshold": 6588.500244140625,
+          "n": 180,
+          "accuracy": 0.4888888888888889,
+          "precision": 0.5555555555555556,
+          "recall": 0.20833333333333334,
+          "f1": 0.30303030303030304,
+          "false_positive_rate": 0.19047619047619047,
+          "roc_auc": 0.5667162698412699,
+          "confusion_matrix": {
+            "tn": 68,
+            "fp": 16,
+            "fn": 76,
+            "tp": 20
+          }
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "onsets": [
+        {
+          "block": [
+            "12_Evil_Twin",
+            23
+          ],
+          "onset_window_idx": 1608066140,
+          "detection_delay_windows": null
+        },
+        {
+          "block": [
+            "12_Evil_Twin",
+            33
+          ],
+          "onset_window_idx": 1608066327,
+          "detection_delay_windows": null
+        }
+      ],
+      "test_blocks": [
+        [
+          "12_Evil_Twin",
+          0
+        ],
+        [
+          "12_Evil_Twin",
+          3
+        ],
+        [
+          "12_Evil_Twin",
+          7
+        ],
+        [
+          "12_Evil_Twin",
+          20
+        ],
+        [
+          "12_Evil_Twin",
+          23
+        ],
+        [
+          "12_Evil_Twin",
+          27
+        ],
+        [
+          "12_Evil_Twin",
+          29
+        ],
+        [
+          "12_Evil_Twin",
+          33
+        ],
+        [
+          "12_Evil_Twin",
+          40
+        ]
+      ],
+      "n_train": 331,
+      "n_val": 57,
+      "n_test": 171,
+      "test_attack_sequences": 94,
+      "lstm": {
+        "threshold": 0.8074478507041931,
+        "n": 171,
+        "accuracy": 0.7192982456140351,
+        "precision": 0.9259259259259259,
+        "recall": 0.5319148936170213,
+        "f1": 0.6756756756756757,
+        "false_positive_rate": 0.05194805194805195,
+        "roc_auc": 0.9074329925393755,
+        "confusion_matrix": {
+          "tn": 73,
+          "fp": 4,
+          "fn": 44,
+          "tp": 50
+        }
+      },
+      "baselines": {
+        "deauth_rate_rule": {
+          "threshold": 1e-06,
+          "n": 171,
+          "accuracy": 0.45614035087719296,
+          "precision": 0.6666666666666666,
+          "recall": 0.02127659574468085,
+          "f1": 0.041237113402061855,
+          "false_positive_rate": 0.012987012987012988,
+          "roc_auc": 0.5041447913788338,
+          "confusion_matrix": {
+            "tn": 76,
+            "fp": 1,
+            "fn": 92,
+            "tp": 2
+          }
+        },
+        "mgmt_rate_rule": {
+          "threshold": 40.0000057220459,
+          "n": 171,
+          "accuracy": 0.4619883040935672,
+          "precision": 0.75,
+          "recall": 0.031914893617021274,
+          "f1": 0.061224489795918366,
+          "false_positive_rate": 0.012987012987012988,
+          "roc_auc": 0.9285023487151146,
+          "confusion_matrix": {
+            "tn": 76,
+            "fp": 1,
+            "fn": 91,
+            "tp": 3
+          }
+        },
+        "frame_rate_rule": {
+          "threshold": 9408.498046875,
+          "n": 171,
+          "accuracy": 0.5146198830409356,
+          "precision": 1.0,
+          "recall": 0.11702127659574468,
+          "f1": 0.20952380952380953,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.8588007736943907,
+          "confusion_matrix": {
+            "tn": 77,
+            "fp": 0,
+            "fn": 83,
+            "tp": 11
+          }
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "onsets": [],
+      "test_blocks": [
+        [
+          "12_Evil_Twin",
+          1
+        ],
+        [
+          "12_Evil_Twin",
+          13
+        ],
+        [
+          "12_Evil_Twin",
+          14
+        ],
+        [
+          "12_Evil_Twin",
+          15
+        ],
+        [
+          "12_Evil_Twin",
+          25
+        ],
+        [
+          "12_Evil_Twin",
+          26
+        ],
+        [
+          "12_Evil_Twin",
+          30
+        ],
+        [
+          "12_Evil_Twin",
+          31
+        ]
+      ],
+      "n_train": 450,
+      "n_val": 57,
+      "n_test": 160,
+      "test_attack_sequences": 80,
+      "lstm": {
+        "threshold": 0.7625055015087128,
+        "n": 160,
+        "accuracy": 0.51875,
+        "precision": 1.0,
+        "recall": 0.0375,
+        "f1": 0.07228915662650602,
+        "false_positive_rate": 0.0,
+        "roc_auc": 1.0,
+        "confusion_matrix": {
+          "tn": 80,
+          "fp": 0,
+          "fn": 77,
+          "tp": 3
+        }
+      },
+      "baselines": {
+        "deauth_rate_rule": {
+          "threshold": 1e-06,
+          "n": 160,
+          "accuracy": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.5,
+          "confusion_matrix": {
+            "tn": 80,
+            "fp": 0,
+            "fn": 80,
+            "tp": 0
+          }
+        },
+        "mgmt_rate_rule": {
+          "threshold": 50.500003814697266,
+          "n": 160,
+          "accuracy": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.948515625,
+          "confusion_matrix": {
+            "tn": 80,
+            "fp": 0,
+            "fn": 80,
+            "tp": 0
+          }
+        },
+        "frame_rate_rule": {
+          "threshold": 11072.5,
+          "n": 160,
+          "accuracy": 0.50625,
+          "precision": 1.0,
+          "recall": 0.0125,
+          "f1": 0.024691358024691357,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.6285937500000001,
+          "confusion_matrix": {
+            "tn": 80,
+            "fp": 0,
+            "fn": 79,
+            "tp": 1
+          }
+        }
+      }
+    }
+  ],
+  "onset_delays_windows": [
+    0,
+    0,
+    9,
+    null,
+    null
+  ],
+  "lstm_fold_spread": {
+    "recall_min": 0.0375,
+    "recall_max": 1.0,
+    "fpr_min": 0.0,
+    "fpr_max": 0.19298245614035087
+  },
+  "note": "All attack data comes from ONE attack episode in ONE capture session. Folds are blocks of that episode, so this measures within-session performance, not generalisation to other networks or attacks. Pooled AUC mixes five models."
+}

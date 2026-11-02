@@ -1,0 +1,620 @@
+{
+  "k": 5,
+  "purge_windows": 10,
+  "block_windows": 20,
+  "config": {
+    "window_s": 1.0,
+    "seq_len": 10,
+    "max_gap_windows": 120,
+    "min_attack_frames": 3,
+    "block_windows": 20,
+    "train_frac": 0.7,
+    "val_frac": 0.15,
+    "lstm_units": 64,
+    "dense_units": 32,
+    "dropout": 0.3,
+    "learning_rate": 0.001,
+    "epochs": 40,
+    "batch_size": 64,
+    "patience": 6,
+    "seed": 42,
+    "target_fpr": 0.02,
+    "consecutive": 1,
+    "exclude_features": [
+      "rssi_mean",
+      "rssi_std",
+      "rssi_available"
+    ]
+  },
+  "pooled": {
+    "lstm": {
+      "threshold": null,
+      "n": 601,
+      "accuracy": 0.9584026622296173,
+      "precision": 0.9642857142857143,
+      "recall": 0.8950276243093923,
+      "f1": 0.9283667621776505,
+      "false_positive_rate": 0.014285714285714285,
+      "roc_auc": 0.9658905551170743,
+      "confusion_matrix": {
+        "tn": 414,
+        "fp": 6,
+        "fn": 19,
+        "tp": 162
+      }
+    },
+    "deauth_rate_rule": {
+      "threshold": null,
+      "n": 601,
+      "accuracy": 0.7088186356073212,
+      "precision": 0.875,
+      "recall": 0.03867403314917127,
+      "f1": 0.07407407407407407,
+      "false_positive_rate": 0.002380952380952381,
+      "roc_auc": 0.5181925808997632,
+      "confusion_matrix": {
+        "tn": 419,
+        "fp": 1,
+        "fn": 174,
+        "tp": 7
+      }
+    },
+    "mgmt_rate_rule": {
+      "threshold": null,
+      "n": 601,
+      "accuracy": 0.978369384359401,
+      "precision": 0.9941176470588236,
+      "recall": 0.9337016574585635,
+      "f1": 0.9629629629629629,
+      "false_positive_rate": 0.002380952380952381,
+      "roc_auc": 0.9976453564851355,
+      "confusion_matrix": {
+        "tn": 419,
+        "fp": 1,
+        "fn": 12,
+        "tp": 169
+      }
+    },
+    "frame_rate_rule": {
+      "threshold": null,
+      "n": 601,
+      "accuracy": 0.6589018302828619,
+      "precision": 0.3235294117647059,
+      "recall": 0.12154696132596685,
+      "f1": 0.17670682730923695,
+      "false_positive_rate": 0.10952380952380952,
+      "roc_auc": 0.6521967903183372,
+      "confusion_matrix": {
+        "tn": 374,
+        "fp": 46,
+        "fn": 159,
+        "tp": 22
+      }
+    }
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "onsets": [],
+      "test_blocks": [
+        [
+          "3__Re_Assoc",
+          1
+        ],
+        [
+          "3__Re_Assoc",
+          9
+        ],
+        [
+          "3__Re_Assoc",
+          10
+        ],
+        [
+          "3__Re_Assoc",
+          16
+        ],
+        [
+          "3__Re_Assoc",
+          17
+        ],
+        [
+          "3__Re_Assoc",
+          23
+        ],
+        [
+          "3__Re_Assoc",
+          26
+        ]
+      ],
+      "n_train": 209,
+      "n_val": 35,
+      "n_test": 140,
+      "test_attack_sequences": 40,
+      "lstm": {
+        "threshold": 0.6877538114786148,
+        "n": 140,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 1.0,
+        "confusion_matrix": {
+          "tn": 100,
+          "fp": 0,
+          "fn": 0,
+          "tp": 40
+        }
+      },
+      "baselines": {
+        "deauth_rate_rule": {
+          "threshold": 1e-06,
+          "n": 140,
+          "accuracy": 0.7071428571428572,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.01,
+          "roc_auc": 0.495,
+          "confusion_matrix": {
+            "tn": 99,
+            "fp": 1,
+            "fn": 40,
+            "tp": 0
+          }
+        },
+        "mgmt_rate_rule": {
+          "threshold": 44.00001525878906,
+          "n": 140,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "roc_auc": 1.0,
+          "confusion_matrix": {
+            "tn": 100,
+            "fp": 0,
+            "fn": 0,
+            "tp": 40
+          }
+        },
+        "frame_rate_rule": {
+          "threshold": 5712.001953125,
+          "n": 140,
+          "accuracy": 0.55,
+          "precision": 0.2553191489361702,
+          "recall": 0.3,
+          "f1": 0.27586206896551724,
+          "false_positive_rate": 0.35,
+          "roc_auc": 0.5061249999999999,
+          "confusion_matrix": {
+            "tn": 65,
+            "fp": 35,
+            "fn": 28,
+            "tp": 12
+          }
+        }
+      }
+    },
+    {
+      "fold": 1,
+      "onsets": [],
+      "test_blocks": [
+        [
+          "3__Re_Assoc",
+          7
+        ],
+        [
+          "3__Re_Assoc",
+          12
+        ],
+        [
+          "3__Re_Assoc",
+          14
+        ],
+        [
+          "3__Re_Assoc",
+          18
+        ],
+        [
+          "3__Re_Assoc",
+          25
+        ],
+        [
+          "3__Re_Assoc",
+          27
+        ]
+      ],
+      "n_train": 227,
+      "n_val": 35,
+      "n_test": 120,
+      "test_attack_sequences": 40,
+      "lstm": {
+        "threshold": 0.9822805225849152,
+        "n": 120,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 1.0,
+        "confusion_matrix": {
+          "tn": 80,
+          "fp": 0,
+          "fn": 0,
+          "tp": 40
+        }
+      },
+      "baselines": {
+        "deauth_rate_rule": {
+          "threshold": 1e-06,
+          "n": 120,
+          "accuracy": 0.6666666666666666,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.5,
+          "confusion_matrix": {
+            "tn": 80,
+            "fp": 0,
+            "fn": 40,
+            "tp": 0
+          }
+        },
+        "mgmt_rate_rule": {
+          "threshold": 63.5,
+          "n": 120,
+          "accuracy": 0.9583333333333334,
+          "precision": 1.0,
+          "recall": 0.875,
+          "f1": 0.9333333333333333,
+          "false_positive_rate": 0.0,
+          "roc_auc": 1.0,
+          "confusion_matrix": {
+            "tn": 80,
+            "fp": 0,
+            "fn": 5,
+            "tp": 35
+          }
+        },
+        "frame_rate_rule": {
+          "threshold": 8179.500244140625,
+          "n": 120,
+          "accuracy": 0.6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.1,
+          "roc_auc": 0.584375,
+          "confusion_matrix": {
+            "tn": 72,
+            "fp": 8,
+            "fn": 40,
+            "tp": 0
+          }
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "onsets": [
+        {
+          "block": [
+            "3__Re_Assoc",
+            21
+          ],
+          "onset_window_idx": 1608311775,
+          "detection_delay_windows": 6
+        }
+      ],
+      "test_blocks": [
+        [
+          "3__Re_Assoc",
+          2
+        ],
+        [
+          "3__Re_Assoc",
+          3
+        ],
+        [
+          "3__Re_Assoc",
+          5
+        ],
+        [
+          "3__Re_Assoc",
+          6
+        ],
+        [
+          "3__Re_Assoc",
+          21
+        ],
+        [
+          "3__Re_Assoc",
+          30
+        ]
+      ],
+      "n_train": 314,
+      "n_val": 35,
+      "n_test": 110,
+      "test_attack_sequences": 21,
+      "lstm": {
+        "threshold": 0.5007189387688413,
+        "n": 110,
+        "accuracy": 0.8909090909090909,
+        "precision": 0.7142857142857143,
+        "recall": 0.7142857142857143,
+        "f1": 0.7142857142857143,
+        "false_positive_rate": 0.06741573033707865,
+        "roc_auc": 0.7474585339753879,
+        "confusion_matrix": {
+          "tn": 83,
+          "fp": 6,
+          "fn": 6,
+          "tp": 15
+        }
+      },
+      "baselines": {
+        "deauth_rate_rule": {
+          "threshold": 1e-06,
+          "n": 110,
+          "accuracy": 0.8090909090909091,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.5,
+          "confusion_matrix": {
+            "tn": 89,
+            "fp": 0,
+            "fn": 21,
+            "tp": 0
+          }
+        },
+        "mgmt_rate_rule": {
+          "threshold": 39.499995708465576,
+          "n": 110,
+          "accuracy": 0.990909090909091,
+          "precision": 0.9545454545454546,
+          "recall": 1.0,
+          "f1": 0.9767441860465116,
+          "false_positive_rate": 0.011235955056179775,
+          "roc_auc": 0.9892990904226859,
+          "confusion_matrix": {
+            "tn": 88,
+            "fp": 1,
+            "fn": 0,
+            "tp": 21
+          }
+        },
+        "frame_rate_rule": {
+          "threshold": 5855.002197265625,
+          "n": 110,
+          "accuracy": 0.8545454545454545,
+          "precision": 1.0,
+          "recall": 0.23809523809523808,
+          "f1": 0.38461538461538464,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.9909042268592829,
+          "confusion_matrix": {
+            "tn": 89,
+            "fp": 0,
+            "fn": 16,
+            "tp": 5
+          }
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "onsets": [],
+      "test_blocks": [
+        [
+          "3__Re_Assoc",
+          0
+        ],
+        [
+          "3__Re_Assoc",
+          4
+        ],
+        [
+          "3__Re_Assoc",
+          11
+        ],
+        [
+          "3__Re_Assoc",
+          20
+        ],
+        [
+          "3__Re_Assoc",
+          22
+        ],
+        [
+          "3__Re_Assoc",
+          28
+        ]
+      ],
+      "n_train": 228,
+      "n_val": 35,
+      "n_test": 111,
+      "test_attack_sequences": 40,
+      "lstm": {
+        "threshold": 0.5003469500225037,
+        "n": 111,
+        "accuracy": 0.8828828828828829,
+        "precision": 1.0,
+        "recall": 0.675,
+        "f1": 0.8059701492537313,
+        "false_positive_rate": 0.0,
+        "roc_auc": 1.0,
+        "confusion_matrix": {
+          "tn": 71,
+          "fp": 0,
+          "fn": 13,
+          "tp": 27
+        }
+      },
+      "baselines": {
+        "deauth_rate_rule": {
+          "threshold": 1e-06,
+          "n": 111,
+          "accuracy": 0.6576576576576577,
+          "precision": 1.0,
+          "recall": 0.05,
+          "f1": 0.09523809523809523,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.525,
+          "confusion_matrix": {
+            "tn": 71,
+            "fp": 0,
+            "fn": 38,
+            "tp": 2
+          }
+        },
+        "mgmt_rate_rule": {
+          "threshold": 48.50002098083496,
+          "n": 111,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "roc_auc": 1.0,
+          "confusion_matrix": {
+            "tn": 71,
+            "fp": 0,
+            "fn": 0,
+            "tp": 40
+          }
+        },
+        "frame_rate_rule": {
+          "threshold": 10192.00390725,
+          "n": 111,
+          "accuracy": 0.6396396396396397,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.6477112676056338,
+          "confusion_matrix": {
+            "tn": 71,
+            "fp": 0,
+            "fn": 40,
+            "tp": 0
+          }
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "onsets": [],
+      "test_blocks": [
+        [
+          "3__Re_Assoc",
+          8
+        ],
+        [
+          "3__Re_Assoc",
+          13
+        ],
+        [
+          "3__Re_Assoc",
+          15
+        ],
+        [
+          "3__Re_Assoc",
+          19
+        ],
+        [
+          "3__Re_Assoc",
+          24
+        ],
+        [
+          "3__Re_Assoc",
+          29
+        ]
+      ],
+      "n_train": 198,
+      "n_val": 55,
+      "n_test": 120,
+      "test_attack_sequences": 40,
+      "lstm": {
+        "threshold": 0.4991373576922342,
+        "n": 120,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 1.0,
+        "confusion_matrix": {
+          "tn": 80,
+          "fp": 0,
+          "fn": 0,
+          "tp": 40
+        }
+      },
+      "baselines": {
+        "deauth_rate_rule": {
+          "threshold": 1e-06,
+          "n": 120,
+          "accuracy": 0.7083333333333334,
+          "precision": 1.0,
+          "recall": 0.125,
+          "f1": 0.2222222222222222,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.5625,
+          "confusion_matrix": {
+            "tn": 80,
+            "fp": 0,
+            "fn": 35,
+            "tp": 5
+          }
+        },
+        "mgmt_rate_rule": {
+          "threshold": 62.0,
+          "n": 120,
+          "accuracy": 0.9416666666666667,
+          "precision": 1.0,
+          "recall": 0.825,
+          "f1": 0.9041095890410958,
+          "false_positive_rate": 0.0,
+          "roc_auc": 1.0,
+          "confusion_matrix": {
+            "tn": 80,
+            "fp": 0,
+            "fn": 7,
+            "tp": 33
+          }
+        },
+        "frame_rate_rule": {
+          "threshold": 8179.500244140625,
+          "n": 120,
+          "accuracy": 0.6833333333333333,
+          "precision": 0.625,
+          "recall": 0.125,
+          "f1": 0.20833333333333334,
+          "false_positive_rate": 0.0375,
+          "roc_auc": 0.5571875,
+          "confusion_matrix": {
+            "tn": 77,
+            "fp": 3,
+            "fn": 35,
+            "tp": 5
+          }
+        }
+      }
+    }
+  ],
+  "onset_delays_windows": [
+    6
+  ],
+  "lstm_fold_spread": {
+    "recall_min": 0.675,
+    "recall_max": 1.0,
+    "fpr_min": 0.0,
+    "fpr_max": 0.06741573033707865
+  },
+  "note": "All attack data comes from ONE attack episode in ONE capture session. Folds are blocks of that episode, so this measures within-session performance, not generalisation to other networks or attacks. Pooled AUC mixes five models."
+}

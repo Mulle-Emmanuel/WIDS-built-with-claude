@@ -1,0 +1,76 @@
+{
+  "captures": {
+    "10_SQL_Injection": {
+      "sequences": 417,
+      "flagged": 0,
+      "flagged_events": 0
+    },
+    "11_SSDP": {
+      "sequences": 399,
+      "flagged": 0,
+      "flagged_events": 0
+    },
+    "12_Evil_Twin": {
+      "sequences": 427,
+      "flagged": 0,
+      "flagged_events": 0
+    },
+    "13_Website_spoofing": {
+      "sequences": 203,
+      "flagged": 0,
+      "flagged_events": 0
+    },
+    "2_Disas": {
+      "sequences": 410,
+      "flagged": 0,
+      "flagged_events": 0
+    },
+    "3__Re_Assoc": {
+      "sequences": 414,
+      "flagged": 0,
+      "flagged_events": 0
+    },
+    "4_Rogue_AP": {
+      "sequences": 423,
+      "flagged": 14,
+      "flagged_events": 1
+    },
+    "5_Krack": {
+      "sequences": 443,
+      "flagged": 10,
+      "flagged_events": 1
+    },
+    "6_Kr00k": {
+      "sequences": 406,
+      "flagged": 0,
+      "flagged_events": 0
+    },
+    "7_SSH": {
+      "sequences": 417,
+      "flagged": 0,
+      "flagged_events": 0
+    },
+    "8_Botnet": {
+      "sequences": 173,
+      "flagged": 0,
+      "flagged_events": 0
+    },
+    "9_Malware": {
+      "sequences": 380,
+      "flagged": 0,
+      "flagged_events": 0
+    }
+  },
+  "normal_sequences": 4512,
+  "approx_independent_segments": 451,
+  "flagged": 24,
+  "flagged_events": 2,
+  "false_positive_rate": 0.005319148936170213,
+  "fpr_upper95_overlapping_sequences": 0.007902837448219738,
+  "fpr_upper95_independent_segments": 0.01937269653912602,
+  "longest_flagged_run_windows": 14,
+  "normal_traffic_minutes": 75.2,
+  "false_alert_events_per_hour": 1.5957446808510638,
+  "threshold": 0.5001189781178255,
+  "note": "Windows before each capture's first labelled attack frame. Labels only cover frames matched by the AWID3 filters, so unlabelled attack-related frames may still be present. Same lab as training."
+}

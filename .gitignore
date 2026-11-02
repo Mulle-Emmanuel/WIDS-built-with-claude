@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.db
+*.sqlite3
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Generated package metadata
+src/*.egg-info/
+
+# SQLite temporary files
+*-journal
+*-wal
+*-shm
+
+# Python test/cache files
+.coverage
+htmlcov/

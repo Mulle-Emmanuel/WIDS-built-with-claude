@@ -1,0 +1,948 @@
+{
+  "k": 5,
+  "purge_windows": 10,
+  "block_windows": 20,
+  "config": {
+    "window_s": 1.0,
+    "seq_len": 10,
+    "max_gap_windows": 120,
+    "min_attack_frames": 3,
+    "block_windows": 20,
+    "train_frac": 0.7,
+    "val_frac": 0.15,
+    "lstm_units": 64,
+    "dense_units": 32,
+    "dropout": 0.3,
+    "learning_rate": 0.001,
+    "epochs": 40,
+    "batch_size": 64,
+    "patience": 6,
+    "seed": 42,
+    "target_fpr": 0.02,
+    "consecutive": 1,
+    "exclude_features": [
+      "rssi_mean",
+      "rssi_std",
+      "rssi_available"
+    ]
+  },
+  "pooled": {
+    "lstm": {
+      "threshold": null,
+      "n": 611,
+      "accuracy": 0.7250409165302782,
+      "precision": 0.694300518134715,
+      "recall": 0.551440329218107,
+      "f1": 0.6146788990825688,
+      "false_positive_rate": 0.16032608695652173,
+      "roc_auc": 0.8434201109321882,
+      "confusion_matrix": {
+        "tn": 309,
+        "fp": 59,
+        "fn": 109,
+        "tp": 134
+      }
+    },
+    "deauth_rate_rule": {
+      "threshold": null,
+      "n": 611,
+      "accuracy": 0.602291325695581,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "false_positive_rate": 0.0,
+      "roc_auc": 0.5,
+      "confusion_matrix": {
+        "tn": 368,
+        "fp": 0,
+        "fn": 243,
+        "tp": 0
+      }
+    },
+    "mgmt_rate_rule": {
+      "threshold": null,
+      "n": 611,
+      "accuracy": 0.5810147299509002,
+      "precision": 0.3488372093023256,
+      "recall": 0.06172839506172839,
+      "f1": 0.1048951048951049,
+      "false_positive_rate": 0.07608695652173914,
+      "roc_auc": 0.4421072642691001,
+      "confusion_matrix": {
+        "tn": 340,
+        "fp": 28,
+        "fn": 228,
+        "tp": 15
+      }
+    },
+    "frame_rate_rule": {
+      "threshold": null,
+      "n": 611,
+      "accuracy": 0.7283142389525368,
+      "precision": 0.7583892617449665,
+      "recall": 0.46502057613168724,
+      "f1": 0.576530612244898,
+      "false_positive_rate": 0.09782608695652174,
+      "roc_auc": 0.8800210234388979,
+      "confusion_matrix": {
+        "tn": 332,
+        "fp": 36,
+        "fn": 130,
+        "tp": 113
+      }
+    }
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "onsets": [
+        {
+          "block": [
+            "13_Website_spoofing",
+            10
+          ],
+          "onset_window_idx": 1608060640,
+          "detection_delay_windows": 1
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            10
+          ],
+          "onset_window_idx": 1608060644,
+          "detection_delay_windows": 0
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            10
+          ],
+          "onset_window_idx": 1608060646,
+          "detection_delay_windows": 0
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            12
+          ],
+          "onset_window_idx": 1608060668,
+          "detection_delay_windows": 0
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            12
+          ],
+          "onset_window_idx": 1608060675,
+          "detection_delay_windows": 0
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            12
+          ],
+          "onset_window_idx": 1608060677,
+          "detection_delay_windows": 0
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            12
+          ],
+          "onset_window_idx": 1608060679,
+          "detection_delay_windows": null
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            18
+          ],
+          "onset_window_idx": 1608060789,
+          "detection_delay_windows": 0
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            18
+          ],
+          "onset_window_idx": 1608060791,
+          "detection_delay_windows": 0
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            18
+          ],
+          "onset_window_idx": 1608060793,
+          "detection_delay_windows": 9
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            18
+          ],
+          "onset_window_idx": 1608060796,
+          "detection_delay_windows": 6
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            18
+          ],
+          "onset_window_idx": 1608060799,
+          "detection_delay_windows": 3
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            18
+          ],
+          "onset_window_idx": 1608060802,
+          "detection_delay_windows": 0
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            18
+          ],
+          "onset_window_idx": 1608060804,
+          "detection_delay_windows": 0
+        }
+      ],
+      "test_blocks": [
+        [
+          "13_Website_spoofing",
+          0
+        ],
+        [
+          "13_Website_spoofing",
+          2
+        ],
+        [
+          "13_Website_spoofing",
+          10
+        ],
+        [
+          "13_Website_spoofing",
+          12
+        ],
+        [
+          "13_Website_spoofing",
+          18
+        ],
+        [
+          "13_Website_spoofing",
+          24
+        ],
+        [
+          "13_Website_spoofing",
+          26
+        ]
+      ],
+      "n_train": 255,
+      "n_val": 23,
+      "n_test": 131,
+      "test_attack_sequences": 55,
+      "lstm": {
+        "threshold": 0.5207236707210541,
+        "n": 131,
+        "accuracy": 0.7404580152671756,
+        "precision": 0.7142857142857143,
+        "recall": 0.6363636363636364,
+        "f1": 0.6730769230769231,
+        "false_positive_rate": 0.18421052631578946,
+        "roc_auc": 0.8255980861244019,
+        "confusion_matrix": {
+          "tn": 62,
+          "fp": 14,
+          "fn": 20,
+          "tp": 35
+        }
+      },
+      "baselines": {
+        "deauth_rate_rule": {
+          "threshold": 1e-06,
+          "n": 131,
+          "accuracy": 0.5801526717557252,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.5,
+          "confusion_matrix": {
+            "tn": 76,
+            "fp": 0,
+            "fn": 55,
+            "tp": 0
+          }
+        },
+        "mgmt_rate_rule": {
+          "threshold": 10.000001430511475,
+          "n": 131,
+          "accuracy": 0.5190839694656488,
+          "precision": 0.3888888888888889,
+          "recall": 0.2545454545454545,
+          "f1": 0.3076923076923077,
+          "false_positive_rate": 0.2894736842105263,
+          "roc_auc": 0.4336124401913875,
+          "confusion_matrix": {
+            "tn": 54,
+            "fp": 22,
+            "fn": 41,
+            "tp": 14
+          }
+        },
+        "frame_rate_rule": {
+          "threshold": 4404.499267578125,
+          "n": 131,
+          "accuracy": 0.7862595419847328,
+          "precision": 0.6753246753246753,
+          "recall": 0.9454545454545454,
+          "f1": 0.7878787878787878,
+          "false_positive_rate": 0.32894736842105265,
+          "roc_auc": 0.8488038277511962,
+          "confusion_matrix": {
+            "tn": 51,
+            "fp": 25,
+            "fn": 3,
+            "tp": 52
+          }
+        }
+      }
+    },
+    {
+      "fold": 1,
+      "onsets": [
+        {
+          "block": [
+            "13_Website_spoofing",
+            14
+          ],
+          "onset_window_idx": 1608060708,
+          "detection_delay_windows": 4
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            14
+          ],
+          "onset_window_idx": 1608060718,
+          "detection_delay_windows": 0
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            17
+          ],
+          "onset_window_idx": 1608060771,
+          "detection_delay_windows": 13
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            17
+          ],
+          "onset_window_idx": 1608060774,
+          "detection_delay_windows": 10
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            17
+          ],
+          "onset_window_idx": 1608060787,
+          "detection_delay_windows": null
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            20
+          ],
+          "onset_window_idx": 1608060832,
+          "detection_delay_windows": 0
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            20
+          ],
+          "onset_window_idx": 1608060837,
+          "detection_delay_windows": 0
+        }
+      ],
+      "test_blocks": [
+        [
+          "13_Website_spoofing",
+          3
+        ],
+        [
+          "13_Website_spoofing",
+          9
+        ],
+        [
+          "13_Website_spoofing",
+          14
+        ],
+        [
+          "13_Website_spoofing",
+          17
+        ],
+        [
+          "13_Website_spoofing",
+          20
+        ],
+        [
+          "13_Website_spoofing",
+          27
+        ]
+      ],
+      "n_train": 218,
+      "n_val": 45,
+      "n_test": 120,
+      "test_attack_sequences": 28,
+      "lstm": {
+        "threshold": 0.5681321769952774,
+        "n": 120,
+        "accuracy": 0.7083333333333334,
+        "precision": 0.4339622641509434,
+        "recall": 0.8214285714285714,
+        "f1": 0.5679012345679012,
+        "false_positive_rate": 0.32608695652173914,
+        "roc_auc": 0.8664596273291926,
+        "confusion_matrix": {
+          "tn": 62,
+          "fp": 30,
+          "fn": 5,
+          "tp": 23
+        }
+      },
+      "baselines": {
+        "deauth_rate_rule": {
+          "threshold": 1e-06,
+          "n": 120,
+          "accuracy": 0.7666666666666667,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.5,
+          "confusion_matrix": {
+            "tn": 92,
+            "fp": 0,
+            "fn": 28,
+            "tp": 0
+          }
+        },
+        "mgmt_rate_rule": {
+          "threshold": 21.999997185302735,
+          "n": 120,
+          "accuracy": 0.7333333333333333,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.043478260869565216,
+          "roc_auc": 0.43109472049689435,
+          "confusion_matrix": {
+            "tn": 88,
+            "fp": 4,
+            "fn": 28,
+            "tp": 0
+          }
+        },
+        "frame_rate_rule": {
+          "threshold": 7878.500732421875,
+          "n": 120,
+          "accuracy": 0.875,
+          "precision": 0.7241379310344828,
+          "recall": 0.75,
+          "f1": 0.7368421052631579,
+          "false_positive_rate": 0.08695652173913043,
+          "roc_auc": 0.906444099378882,
+          "confusion_matrix": {
+            "tn": 84,
+            "fp": 8,
+            "fn": 7,
+            "tp": 21
+          }
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "onsets": [
+        {
+          "block": [
+            "13_Website_spoofing",
+            15
+          ],
+          "onset_window_idx": 1608060728,
+          "detection_delay_windows": null
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            15
+          ],
+          "onset_window_idx": 1608060734,
+          "detection_delay_windows": null
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            16
+          ],
+          "onset_window_idx": 1608060755,
+          "detection_delay_windows": null
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            16
+          ],
+          "onset_window_idx": 1608060763,
+          "detection_delay_windows": null
+        }
+      ],
+      "test_blocks": [
+        [
+          "13_Website_spoofing",
+          5
+        ],
+        [
+          "13_Website_spoofing",
+          8
+        ],
+        [
+          "13_Website_spoofing",
+          15
+        ],
+        [
+          "13_Website_spoofing",
+          16
+        ],
+        [
+          "13_Website_spoofing",
+          25
+        ],
+        [
+          "13_Website_spoofing",
+          28
+        ]
+      ],
+      "n_train": 248,
+      "n_val": 35,
+      "n_test": 120,
+      "test_attack_sequences": 48,
+      "lstm": {
+        "threshold": 0.9052833781967163,
+        "n": 120,
+        "accuracy": 0.6,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.9389467592592593,
+        "confusion_matrix": {
+          "tn": 72,
+          "fp": 0,
+          "fn": 48,
+          "tp": 0
+        }
+      },
+      "baselines": {
+        "deauth_rate_rule": {
+          "threshold": 1e-06,
+          "n": 120,
+          "accuracy": 0.6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.5,
+          "confusion_matrix": {
+            "tn": 72,
+            "fp": 0,
+            "fn": 48,
+            "tp": 0
+          }
+        },
+        "mgmt_rate_rule": {
+          "threshold": 19.000002907348634,
+          "n": 120,
+          "accuracy": 0.5833333333333334,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.027777777777777776,
+          "roc_auc": 0.4165219907407408,
+          "confusion_matrix": {
+            "tn": 70,
+            "fp": 2,
+            "fn": 48,
+            "tp": 0
+          }
+        },
+        "frame_rate_rule": {
+          "threshold": 7612.5009765625,
+          "n": 120,
+          "accuracy": 0.75,
+          "precision": 0.9090909090909091,
+          "recall": 0.4166666666666667,
+          "f1": 0.5714285714285714,
+          "false_positive_rate": 0.027777777777777776,
+          "roc_auc": 0.9354745370370371,
+          "confusion_matrix": {
+            "tn": 70,
+            "fp": 2,
+            "fn": 28,
+            "tp": 20
+          }
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "onsets": [
+        {
+          "block": [
+            "13_Website_spoofing",
+            11
+          ],
+          "onset_window_idx": 1608060653,
+          "detection_delay_windows": 0
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            11
+          ],
+          "onset_window_idx": 1608060658,
+          "detection_delay_windows": null
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            11
+          ],
+          "onset_window_idx": 1608060663,
+          "detection_delay_windows": null
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            19
+          ],
+          "onset_window_idx": 1608060816,
+          "detection_delay_windows": 0
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            19
+          ],
+          "onset_window_idx": 1608060818,
+          "detection_delay_windows": null
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            19
+          ],
+          "onset_window_idx": 1608060821,
+          "detection_delay_windows": null
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            19
+          ],
+          "onset_window_idx": 1608060823,
+          "detection_delay_windows": null
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            21
+          ],
+          "onset_window_idx": 1608060849,
+          "detection_delay_windows": null
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            21
+          ],
+          "onset_window_idx": 1608060853,
+          "detection_delay_windows": null
+        }
+      ],
+      "test_blocks": [
+        [
+          "13_Website_spoofing",
+          4
+        ],
+        [
+          "13_Website_spoofing",
+          6
+        ],
+        [
+          "13_Website_spoofing",
+          11
+        ],
+        [
+          "13_Website_spoofing",
+          19
+        ],
+        [
+          "13_Website_spoofing",
+          21
+        ],
+        [
+          "13_Website_spoofing",
+          30
+        ]
+      ],
+      "n_train": 227,
+      "n_val": 55,
+      "n_test": 120,
+      "test_attack_sequences": 45,
+      "lstm": {
+        "threshold": 0.9680314064025879,
+        "n": 120,
+        "accuracy": 0.6833333333333333,
+        "precision": 0.5945945945945946,
+        "recall": 0.4888888888888889,
+        "f1": 0.5365853658536586,
+        "false_positive_rate": 0.2,
+        "roc_auc": 0.7762962962962963,
+        "confusion_matrix": {
+          "tn": 60,
+          "fp": 15,
+          "fn": 23,
+          "tp": 22
+        }
+      },
+      "baselines": {
+        "deauth_rate_rule": {
+          "threshold": 1e-06,
+          "n": 120,
+          "accuracy": 0.625,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.5,
+          "confusion_matrix": {
+            "tn": 75,
+            "fp": 0,
+            "fn": 45,
+            "tp": 0
+          }
+        },
+        "mgmt_rate_rule": {
+          "threshold": 21.999997185302735,
+          "n": 120,
+          "accuracy": 0.6333333333333333,
+          "precision": 1.0,
+          "recall": 0.022222222222222223,
+          "f1": 0.043478260869565216,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.5358518518518518,
+          "confusion_matrix": {
+            "tn": 75,
+            "fp": 0,
+            "fn": 44,
+            "tp": 1
+          }
+        },
+        "frame_rate_rule": {
+          "threshold": 10684.0029296875,
+          "n": 120,
+          "accuracy": 0.6166666666666667,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.013333333333333334,
+          "roc_auc": 0.7702222222222223,
+          "confusion_matrix": {
+            "tn": 74,
+            "fp": 1,
+            "fn": 45,
+            "tp": 0
+          }
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "onsets": [
+        {
+          "block": [
+            "13_Website_spoofing",
+            13
+          ],
+          "onset_window_idx": 1608060690,
+          "detection_delay_windows": null
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            13
+          ],
+          "onset_window_idx": 1608060695,
+          "detection_delay_windows": null
+        },
+        {
+          "block": [
+            "13_Website_spoofing",
+            13
+          ],
+          "onset_window_idx": 1608060703,
+          "detection_delay_windows": null
+        }
+      ],
+      "test_blocks": [
+        [
+          "13_Website_spoofing",
+          1
+        ],
+        [
+          "13_Website_spoofing",
+          7
+        ],
+        [
+          "13_Website_spoofing",
+          13
+        ],
+        [
+          "13_Website_spoofing",
+          22
+        ],
+        [
+          "13_Website_spoofing",
+          23
+        ],
+        [
+          "13_Website_spoofing",
+          29
+        ]
+      ],
+      "n_train": 229,
+      "n_val": 45,
+      "n_test": 120,
+      "test_attack_sequences": 67,
+      "lstm": {
+        "threshold": 0.9206068515777588,
+        "n": 120,
+        "accuracy": 0.8916666666666667,
+        "precision": 1.0,
+        "recall": 0.8059701492537313,
+        "f1": 0.8925619834710744,
+        "false_positive_rate": 0.0,
+        "roc_auc": 0.9881723458180794,
+        "confusion_matrix": {
+          "tn": 53,
+          "fp": 0,
+          "fn": 13,
+          "tp": 54
+        }
+      },
+      "baselines": {
+        "deauth_rate_rule": {
+          "threshold": 1e-06,
+          "n": 120,
+          "accuracy": 0.44166666666666665,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.5,
+          "confusion_matrix": {
+            "tn": 53,
+            "fp": 0,
+            "fn": 67,
+            "tp": 0
+          }
+        },
+        "mgmt_rate_rule": {
+          "threshold": 31.000001,
+          "n": 120,
+          "accuracy": 0.44166666666666665,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.3927062799211489,
+          "confusion_matrix": {
+            "tn": 53,
+            "fp": 0,
+            "fn": 67,
+            "tp": 0
+          }
+        },
+        "frame_rate_rule": {
+          "threshold": 8822.5029296875,
+          "n": 120,
+          "accuracy": 0.6083333333333333,
+          "precision": 1.0,
+          "recall": 0.29850746268656714,
+          "f1": 0.45977011494252873,
+          "false_positive_rate": 0.0,
+          "roc_auc": 0.9836665727963954,
+          "confusion_matrix": {
+            "tn": 53,
+            "fp": 0,
+            "fn": 47,
+            "tp": 20
+          }
+        }
+      }
+    }
+  ],
+  "onset_delays_windows": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    null,
+    0,
+    0,
+    9,
+    6,
+    3,
+    0,
+    0,
+    4,
+    0,
+    13,
+    10,
+    null,
+    0,
+    0,
+    null,
+    null,
+    null,
+    null,
+    0,
+    null,
+    null,
+    0,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "lstm_fold_spread": {
+    "recall_min": 0.0,
+    "recall_max": 0.8214285714285714,
+    "fpr_min": 0.0,
+    "fpr_max": 0.32608695652173914
+  },
+  "note": "All attack data comes from ONE attack episode in ONE capture session. Folds are blocks of that episode, so this measures within-session performance, not generalisation to other networks or attacks. Pooled AUC mixes five models."
+}
